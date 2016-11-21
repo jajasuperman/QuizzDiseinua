@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta name="tipo_contenido" content="text/html;" http-equiv="content-type" charset="utf-8">
 	<title>Sign In</title>
@@ -12,6 +12,7 @@
 		   type="text/css" 
 		   media="only screen and (max-width: 480px)"
 		   href="../CSS/smartphone.css" />
+	<link rel="stylesheet" href="../css/bootstrap.min.css"/>
   </head>
   <body>
   <div id="page-wrap">
@@ -131,5 +132,7 @@
 		<p><a href="https://github.com/julenferre/myquizz" target="_blank">Link GITHUB</a></p>
 	</footer>
   </div>
+  <script src="../js/jquery-3.1.1.slim.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
   </body>
 </html>

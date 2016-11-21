@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta name="tipo_contenido" content="text/html;" http-equiv="content-type" charset="utf-8">
 	<title>Credits</title>
@@ -12,73 +12,76 @@
 		   type='text/css' 
 		   media='only screen and (max-width: 480px)'
 		   href='../CSS/smartphone.css' />
+	<link rel="stylesheet" href="../css/bootstrap.min.css"/>
 	<script src="../JavaScript/mapaKargatu.js"></script> <!--<script></script> horrela jartzea beharrezkoa da-->
   </head>
   <body>
   <div id='page-wrap'>
-	<header class='main' id='h1'>
-      	<span class="right" style="display:inline; float: right;"><a href="../HTML/signUp.html">Sign Up</a> </span><br/>
-      	<span class="right" style="display:inline; float: right;"><a href="../PHP/signIn.php">Log In</a> </span>
-      	<span class="right" style="display:none; float: right;"><a href="../PHP/logout.php">LogOut</a> </span>
-		<h2>Credits</h2>
-    </header>
-	<nav class='main' id='n1' role='navigation'>
-		<span><a href='layout.html'>Home</a></span>
-		<span><a href='../PHP/questions.php'>Quizzes</a></span>
-		<span><a href='getUserInform.html'>Erabiltzaileak</a></span>
-		<span><a href='credits.html'>Credits</a></span>
-	</nav>
-    <section class="main" id="s1">
-		<div style="overflow:auto">
-			<p>Egileak: Julen Ferrero eta Aimar Ugarte</p>
-			<p>Espezialitatea: Software Ingeniaritza</p>
-			<p>Argazkiak: 
-				<a href="https://git-scm.com/"><img src="../Irudiak/GitIcon.png" /></a>
-				<a href="https://github.com"><img src="../Irudiak/GithubIcon.png" /></a>
-				<a href="https://www.hostinger.es/"><img src="../Irudiak/HostingerIcon.png" /></a>
-			</p><br>
-			<p>GEOLOKALIZAZIOA</p>
-			<input type="button" onclick="kalkulatuLokalizazioa()" value="Lokalizazioa kalkulatu" />
-			<p id="geoBezeroa"> </p>
-			<div id="mapDiv"><div id="map"> </div></div>
-			<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAk0qKVhKcmzna-mKVWofRcfsBRyybSKr4&callback=myMap"></script>
-			<p id="geoZerbitzaria"> </p>
-			<script>
-			var bezeroa = document.getElementById("geoBezeroa");
-			var zerbitz = document.getElementById("geoZerbitzaria");
-			function kalkulatuLokalizazioa(){
-				bezeroa.innerHTML = "Kalkulatzen...";
-				/*BEZEROA*/				
-				if (navigator.geolocation) { 
-					navigator.geolocation.getCurrentPosition(showPosition);
-				} else {
-					bezeroa.innerHTML = "Geolokalizazioa ez dago eskuragai arakatzaile honetan.";
+		<header class='main' id='h1'>
+			<span class="right" style="display:inline; float: right;"><a href="../HTML/signUp.html">Sign Up</a> </span><br/>
+			<span class="right" style="display:inline; float: right;"><a href="../PHP/signIn.php">Log In</a> </span>
+			<span class="right" style="display:none; float: right;"><a href="../PHP/logout.php">LogOut</a> </span>
+			<h2>Credits</h2>
+		</header>
+		<nav class='main' id='n1' role='navigation'>
+			<span><a href='layout.html'>Home</a></span>
+			<span><a href='../PHP/questions.php'>Quizzes</a></span>
+			<span><a href='getUserInform.html'>Erabiltzaileak</a></span>
+			<span><a href='credits.html'>Credits</a></span>
+		</nav>
+		<section class="main" id="s1">
+			<div style="overflow:auto">
+				<p>Egileak: Julen Ferrero, Gontzal Pujana eta Eneko Sampedro</p>
+				<p>Espezialitatea: Software Ingeniaritza</p>
+				<p>Argazkiak: 
+					<a href="https://git-scm.com/"><img src="../Irudiak/GitIcon.png" /></a>
+					<a href="https://github.com"><img src="../Irudiak/GithubIcon.png" /></a>
+					<a href="https://www.hostinger.es/"><img src="../Irudiak/HostingerIcon.png" /></a>
+				</p><br>
+				<p>GEOLOKALIZAZIOA</p>
+				<input type="button" onclick="kalkulatuLokalizazioa()" value="Lokalizazioa kalkulatu" />
+				<p id="geoBezeroa"> </p>
+				<div id="mapDiv"><div id="map"> </div></div>
+				<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAk0qKVhKcmzna-mKVWofRcfsBRyybSKr4&callback=myMap"></script>
+				<p id="geoZerbitzaria"> </p>
+				<script>
+				var bezeroa = document.getElementById("geoBezeroa");
+				var zerbitz = document.getElementById("geoZerbitzaria");
+				function kalkulatuLokalizazioa(){
+					bezeroa.innerHTML = "Kalkulatzen...";
+					/*BEZEROA*/				
+					if (navigator.geolocation) { 
+						navigator.geolocation.getCurrentPosition(showPosition);
+					} else {
+						bezeroa.innerHTML = "Geolokalizazioa ez dago eskuragai arakatzaile honetan.";
+					}
+					/*ZERBITZARIA*/
+					if (window.XMLHttpRequest){// code for IE7+, Firefox, Chrome, Opera, Safari
+						xmlhttp=new XMLHttpRequest();
+					}
+					else{// code for IE6, IE5
+						xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+					}
+					xmlhttp.onreadystatechange=function(){
+						if (xmlhttp.readyState==4 && xmlhttp.status==200){
+							zerbitz.innerHTML = "Zerbitzariaren Lokalizazioa -> " + xmlhttp.responseText;	
+						}
+					}
+					xmlhttp.open("GET", "../PHP/serverGeolocation.php", false );
+					xmlhttp.send();   
 				}
-				/*ZERBITZARIA*/
-				if (window.XMLHttpRequest){// code for IE7+, Firefox, Chrome, Opera, Safari
-				    xmlhttp=new XMLHttpRequest();
-				}
-				else{// code for IE6, IE5
-				    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-				}
-				xmlhttp.onreadystatechange=function(){
-				    if (xmlhttp.readyState==4 && xmlhttp.status==200){
-				        zerbitz.innerHTML = "Zerbitzariaren Lokalizazioa -> " + xmlhttp.responseText;	
-				    }
-				}
-			    xmlhttp.open("GET", "../PHP/serverGeolocation.php", false );
-			    xmlhttp.send();   
-			}
-			function showPosition(position) {
-				bezeroa.innerHTML = "Zure koordenatuak -> latitudea: " + position.coords.latitude.toFixed(3) +", longitudea: " + position.coords.longitude.toFixed(3) + "  <a id='BezMapLink' title='Mapan ikusi' href='#'' onclick='bezeroMapaErakutzi();return false;'>Mapa</a>";
-			}	
-			</script>
-		</div>
-    </section>
-	<footer class='main' id='f1'>
-		<p><a href="http://en.wikipedia.org/wiki/Quiz" target="_blank">What is a Quiz?</a></p>
-		<p><a href='https://github.com/julenferre/myquizz' target="_blank">Link GITHUB</a></p>
-	</footer>
-</div>
+				function showPosition(position) {
+					bezeroa.innerHTML = "Zure koordenatuak -> latitudea: " + position.coords.latitude.toFixed(3) +", longitudea: " + position.coords.longitude.toFixed(3) + "  <a id='BezMapLink' title='Mapan ikusi' href='#'' onclick='bezeroMapaErakutzi();return false;'>Mapa</a>";
+				}	
+				</script>
+			</div>
+		</section>
+		<footer class='main' id='f1'>
+			<p><a href="http://en.wikipedia.org/wiki/Quiz" target="_blank">What is a Quiz?</a></p>
+			<p><a href='https://github.com/julenferre/myquizz' target="_blank">Link GITHUB</a></p>
+		</footer>
+	</div>
+	<script src="../js/jquery-3.1.1.slim.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
 </body>
 </html>
