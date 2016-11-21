@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="tipo_contenido" content="text/html;" http-equiv="content-type" charset="utf-8">
+	<title>Sign Up</title>
+    <link rel='stylesheet' type='text/css' href='../CSS/style.css' />
+	<link rel='stylesheet' 
+		   type='text/css' 
+		   media='only screen and (min-width: 530px) and (min-device-width: 481px)'
+		   href='../CSS/wide.css' />
+	<link rel='stylesheet' 
+		   type='text/css' 
+		   media='only screen and (max-width: 480px)'
+		   href='../CSS/smartphone.css' />
+	<script>
+		var emailOndo = false;
+		var ticketaOndo = false;
+		var pasahitzaOndo = false;
+		function irudiAurrekarga(irudia){
+			document.getElementById('argazkiAurrekarga').style.display = 'inline';
+			document.getElementById('argazkiAurrekarga').src = window.URL.createObjectURL(irudia);
+		}
+		function checkEposta(eposta){
+			xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function(){
+				if ((xhttp.readyState==4)&&(xhttp.status==200)){
+					if(xhttp.responseText == "BAI"){
+						emailOndo = true;
+						document.getElementById("matrikulatuErantzuna").style = "display:none";
+					}
+					else if(xhttp.responseText == "EZ"){
+						emailOndo = false;
+						document.getElementById("matrikulatuErantzuna").style = "display:inline";
+					}
+				}
+			};
+			xhttp.open("GET","../PHP/emailaMatrikulatuta.php?eposta=" + eposta, true);
+			xhttp.send();
+		}
+		function checkTicketa(ticketa){
+			xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function(){
+				if ((xhttp.readyState==4)&&(xhttp.status==200)){
+					if(xhttp.responseText == "ERABILTZAILE BAIMENDUA"){
+						ticketaOndo = true;
+						document.getElementById("ticketOnaErantzuna").style = "display:none";
+					}
+					else if(xhttp.responseText == "BAIMENIK GABEKO ERABILTZAILEA"){
+						ticketaOndo = false;
+						document.getElementById("ticketOnaErantzuna").style = "display:inline";
+					}
+				}
+			};
+			xhttp.open("GET","../PHP/egiaztatuTicketaBezeroa.php?ticketa=" + ticketa, true);
+			xhttp.send();
+		}
+		function checkPasahitza(pasahitza){
+			xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function(){
+				if ((xhttp.readyState==4)&&(xhttp.status==200)){
+					if(xhttp.responseText == "BALIOZKOA"){
+						pasahitzaOndo = true;
+						document.getElementById("pasahitzaOnaErantzuna").style = "display:none";
+					}
+					else if(xhttp.responseText == "BALIOGABEA"){
+						pasahitzaOndo = false;
+						document.getElementById("pasahitzaOnaErantzuna").style = "display:inline";
+					}
+				}
+			};
+			xhttp.open("GET","../PHP/egiaztatuPasahitzaBezeroa.php?pasahitza=" + pasahitza, true);
+			xhttp.send();
+		}		
+		function checkAll(){
+			if(!checkNagusia() || !emailOndo || !ticketaOndo || !pasahitzaOndo){
+				return false;
+			}
+			else{
+				return true;
+			}
+		}
+	</script>
+	<script src="../JavaScript/signUp.js"></script> <!--<script></script> horrela jartzea beharrezkoa da-->
+  </head>
+  <body>
+  <div id='page-wrap'>
+	<header class='main' id='h1'>
+      	<span class="right" style="display:inline; float: right;"><a href="../HTML/signUp.html">Sign Up</a> </span><br/>
+      	<span class="right" style="display:inline; float: right;"><a href="../PHP/signIn.php">Log In</a> </span>
+      	<span class='right' style='display:none; float: right;'><a href='../PHP/logout.php'>LogOut</a> </span>
+		<h2>Sign Up</h2>
+    </header>
+	<nav class='main' id='n1' role='navigation'>
+		<span><a href='../HTML/layout.html'>Home</a></span>
+		<span><a href='../PHP/questions.php'>Quizzes</a></span>
+		<span><a href='../HTML/getUserInform.html'>Erabiltzaileak</a></span>
+		<span><a href='../HTML/credits.html'>Credits</a></span>
+	</nav>
+    <section class="main" id="s1">
+	
+	<div id="edukia">
+		<form id="erregistro" name="erregistro" method="post" onsubmit="return checkAll()" action="../PHP/enrollWithImage.php" enctype="multipart/form-data" >
+			Izena: 
+			<input type="text" id="izena" name="izena" pattern="([A-Z][a-z]+)(\s[A-Z][a-z]+)*" required/><font color="red">*</font> <br/>
+			Abizenak: 
+			<input type="text" id="abizenak" name="abizenak" pattern="([A-Z][a-z]+\s[A-Z][a-z]+)(\s[A-Z][a-z]+)*" required/><font color="red">*</font> <br/>
+			Eposta elektronikoa: 
+			<input type="text" id="eposta" name="eposta" size="25" pattern="[a-zA-z]+[0-9]{3}(@ikasle\.ehu\.e)u?(s)" required onblur="checkEposta(eposta.value)"/><font color="red">*</font><br/>
+			Erabilpen ticketaren zenbakia:
+			<input type="text" id="ticketa" name="ticketa" size=4 pattern="[0-9]{4}" required onblur="checkTicketa(ticketa.value)"/><font color="red">*</font><br/>
+			Pasahitza: 
+			<input type="password" id="pasahitza" name="pasahitza" size="25"  pattern=".{6,}" required onblur="checkPasahitza(pasahitza.value)"/><font color="red">*</font> <br/>
+			Pasahitza errepikatu: 
+			<input type="password" id="pasahitzaErrepikatu" name="pasahitzaErrepikatu" size="25" required onblur="pasahitzaBaieztatu()" /><font color="red">*</font> <br/>
+			Telefono zenbakia: 
+			<input type="text" id="telefonoa" name="telefonoa" size="10" pattern="[0-9]{9}" required/><font color="red">*</font> <br/>
+			Espezialitatea: 
+				<select id="espezialitatea" name="espezialitatea" onChange="espezBesteakIkusi()">
+					<option>Software ingeniaritza</option>
+					<option>Konputagailuen ingeniaritza</option>
+					<option>Konputazioa</option>
+					<option>Besteak</option>
+				</select><font color="red">*</font> 
+			<div id="divBesteak" style="display:none">
+				<br/><input type="text" id="espez_besteak" name="espez_besteak" placeholder="Idatzi hemen zure espezialitatea" size="50">
+			</div><br/>
+			Interesa duzun teknologiak eta erremintak: <br />
+			<textarea id="tresnak" name="tresnak" style="resize: none; width: 320px; height: 40px"></textarea><br />
+			Argazkia: <input type="file" id="argazkia" name="argazkia" onchange="irudiAurrekarga(this.files[0])"> <br/>
+			<img id="argazkiAurrekarga" alt="Argazkia" style="display: none; height: 150px; width:auto" /><br/>
+			<input type="submit" value="Ados" />
+		</form>	<br/>
+		<div id="matrikulatuErantzuna" style="display: none"><font color='red'>Ikasle hau ez dago Web Sistemak irakasgaian matrikulaturik</font></div><br/>
+		<div id="ticketOnaErantzuna" style="display: none"><font color='red'>Ticket hori ez du balio</font></div>
+		<div id="pasahitzaOnaErantzuna" style="display: none"><font color='red'>Pasahitza hori ahula da</font></div>		
+	</div>
+    </section>
+	<footer class='main' id='f1'>
+		<p><a href="http://en.wikipedia.org/wiki/Quiz" target="_blank">What is a Quiz?</a></p>
+		<p><a href='https://github.com/julenferre/myquizz' target="_blank">Link GITHUB</a></p>
+	</footer>
+  </div>
+  </body>
+</html>

@@ -1,0 +1,80 @@
+@charset "utf-8";
+* {
+	margin: 0; padding: 0;
+}
+
+body {
+	font: 16px Georgia, serif;
+}
+
+#page-wrap {
+	margin: 2% auto; 
+	color: white;
+}
+
+#page-wrap >.main {
+	border: 1px solid #999; 
+	padding: 1%;
+	margin-bottom: 1px;
+	/*color: black;*/
+}
+
+#s1 {	
+	background-image: url("http://66.media.tumblr.com/tumblr_lrbu1l9BJk1qgzxcao1_250.gif");
+	background-repeat: repeat-x;
+	background-size: contain;
+	font: 20px "Comic Sans MS";
+	font-weight: bolder;
+	color: #FFF000;
+	height: 400px;
+	overflow: auto;
+}
+
+div > p {
+	background-color: #FE0FEA;
+	opacity: 0.8;
+	margin: 5px;
+}
+
+h2 {
+	color: black;
+}
+
+section > div {
+	padding: 20px;
+}
+
+header, nav, section {
+	background: #eee; 
+	text-align: center;
+}
+footer	{
+	background: #eee; 
+	text-align: center;
+}
+nav span { 
+	margin: 0px 10px 0px 0px;
+	width: 100%;
+	display: inline-block;
+}
+
+#ErrorMsgs {
+	color: #f61; 
+	font-size: smaler
+}
+
+a > img {
+	background-color: #FABADA;
+	height: 100px; width: 100px;
+}
+
+#map {
+	 margin:auto;
+    height: 300px;
+    width: 40%;
+}
+
+#mapDiv {
+	text-align: center;
+    display: none;
+}
