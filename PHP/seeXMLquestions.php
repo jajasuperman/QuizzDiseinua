@@ -12,7 +12,7 @@
 		   type='text/css' 
 		   media='only screen and (max-width: 480px)'
 		   href='../CSS/smartphone.css' />
-	<link rel="stylesheet" href="../css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="../CSS/bootstrap.min.css"/>
   </head>
   <body>
   <div id='page-wrap'>
