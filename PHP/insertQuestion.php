@@ -61,7 +61,7 @@
 		<p><a href="https://github.com/julenferre/myquizz" target="_blank">Link GITHUB</a></p>
 	</footer>
   </div>
-  <script src="../js/jquery-3.1.1.slim.min.js"></script>
-  <script src="../js/bootstrap.min.js"></script>
+  <script src="../JavaScript/jquery-3.1.1.slim.min.js"></script>
+  <script src="../JavaScript/bootstrap.min.js"></script>
   </body>
 </html>
