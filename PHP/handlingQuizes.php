@@ -4,6 +4,7 @@
     <meta name="tipo_contenido" content="text/html;" http-equiv="content-type" charset="utf-8">
 	<title>Galdera Sartu (AJAX)</title>
 	<link rel="stylesheet" href="../CSS/bootstrap.min.css"/>
+	<link rel="stylesheet" href="../CSS/style.css"/>
 	<script type="text/javascript">	
 		var timer;
 		

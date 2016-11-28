@@ -4,6 +4,7 @@
     <meta name="tipo_contenido" content="text/html;" http-equiv="content-type" charset="utf-8">
 	<title>Galdera Sartu</title>
 	<link rel="stylesheet" href="../CSS/bootstrap.min.css"/>
+	<link rel="stylesheet" href="../CSS/style.css"/>
 	<script src="../JavaScript/signUp.js"></script> <!--<script></script> horrela jartzea beharrezkoa da-->
   </head>
   <body>
