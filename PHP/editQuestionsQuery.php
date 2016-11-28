@@ -27,8 +27,8 @@
 			$mezua .= "<td><input type='text' id='erantzuna' value='".$lerroa['erantzuna']."' required size='30'></td>";
 			$mezua .= "<td><input type='text' id='gaia' value='".$lerroa['gaia']."'></td>";
 			$mezua .= "<td><input type='text' id='maila' value='".$lerroa['maila']."' pattern='[0-5]' size='6'></td>";
-			$mezua .= "<td><input type='submit' value='Eguneratu'></td>";
-			$mezua .= "<td><input type='button' id='ezabatu' value='Ezabatu' onclick='ezabatuGaldera(zenbakia.value)'>";
+			$mezua .= "<td><input type='submit' value='✔'></td>";
+			$mezua .= "<td><input type='button' id='ezabatu' value='✘' onclick='ezabatuGaldera(zenbakia.value)'>";
 			$mezua .= "<input type='text' id='zenbakia' value='".$lerroa['zenbakia']."' style='display:none'></td>";
 			$mezua .= "</form></tr>";
 		}
