@@ -3,15 +3,6 @@
   <head>
     <meta name="tipo_contenido" content="text/html;" http-equiv="content-type" charset="utf-8">
 	<title>Galdera Sartu (AJAX)</title>
-    <link rel="stylesheet" type="text/css" href="../CSS/style.css" />
-	<link rel="stylesheet" 
-		   type="text/css" 
-		   media="only screen and (min-width: 530px) and (min-device-width: 481px)"
-		   href="../CSS/wide.css" />
-	<link rel="stylesheet"
-		   type="text/css" 
-		   media="only screen and (max-width: 480px)"
-		   href="../CSS/smartphone.css" />
 	<link rel="stylesheet" href="../CSS/bootstrap.min.css"/>
 	<script type="text/javascript">	
 		var timer;

@@ -2,16 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta name="tipo_contenido" content="text/html;" http-equiv="content-type" charset="utf-8">
-	<title>Quiz</title>
-    <link rel='stylesheet' type='text/css' href='../CSS/style.css' />
-	<link rel='stylesheet' 
-		   type='text/css' 
-		   media='only screen and (min-width: 530px) and (min-device-width: 481px)'
-		   href='../CSS/wide.css' />
-	<link rel='stylesheet' 
-		   type='text/css' 
-		   media='only screen and (max-width: 480px)'
-		   href='../CSS/smartphone.css' />		
+	<title>Quiz</title>		
 	<link rel="stylesheet" href="../CSS/bootstrap.min.css"/>
   </head>
   <body>
