@@ -8,9 +8,9 @@
 	
 	//HOSTINGER
 	$serverH = "mysql.hostinger.es";
-	$userH = "u823979798_admin";
-	$passH = "adminroot";
-	$ddbbH = "u823979798_quiz";
+	$userH = "u474180337_root";
+	$passH = "tomate123";
+	$ddbbH = "u474180337_wrsa";
 	
 	$conn = new mysqli($serverH, $userH, $passH, $ddbbH); //HOSTINGER
 	
