@@ -5,6 +5,7 @@
 	<title>Quiz</title>
 	<link rel="stylesheet" href="../CSS/bootstrap.min.css"/>
 	<link rel="stylesheet" href="../CSS/style.css"/>
+	<link rel="stylesheet" href="../CSS/taula.css"/>
 	<script>
 		function eguneratuGaldera(zbk,gal,era,gai,mai){			
 			xhttp = new XMLHttpRequest();
