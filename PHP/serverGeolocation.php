@@ -1,8 +1,5 @@
 <?php
 
-	include "sesioaKonprobatu.php";
-	blokeatuSarreta();
-
 	$ServerIP = $_SERVER['SERVER_ADDR'];
 	$requestURI = "http://freegeoip.net/json/" . $ServerIP; //ZERBITZARIKO IP-a. HOSTINGERREN BAKARRIK LORTUKO DU
 	//$requestURI = "http://freegeoip.net/json/158.227.0.238"; //PROBARAKO IP BAT
