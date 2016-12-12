@@ -38,18 +38,24 @@
   </head>
   <body>
   <div id="page-wrap">
-	<header class="main" id="h1">
-      	<?php
-			include "sesioaKonprobatu.php";
-			eremuArrunta();
-		?>
-		<h2>Pasahitza aldatu</h2>
-    </header>
-	<nav class="main" id="n1" role="navigation">
-		<span><a href='../HTML/layout.html'>Home</a></span>
-		<span><a href='../PHP/questions.php'>Quizzes</a></span>
-		<span><a href='../HTML/getUserInform.html'>Erabiltzaileak</a></span>
-		<span><a href='../HTML/credits.html'>Credits</a></span>
+	<nav class='navbar navbar-inverse'>
+	<div class='container-fluid'>
+			<div class='navbar-header'>
+				<a class='navbar-brand' href='../HTML/layout.html'>MyQuizz</a>
+			</div>
+			<ul class='nav navbar-nav'>
+				<li><a href='../HTML/layout.html'>Home</a></li>
+				<li><a href='../PHP/questions.php'>Quizzes</a></li>
+				<li><a href='../HTML/getUserInform.html'>Users</a></li>
+				<li><a href='../HTML/credits.html'>Credits</a></li>
+			</ul>
+			<ul class='nav navbar-nav navbar-right'>
+			<?php
+				include "sesioaKonprobatu.php";
+				eremuArrunta();
+			?>
+			</ul>
+		</div>
 	</nav>
     <section class="main" id="s1">	
 		<div id="edukia">

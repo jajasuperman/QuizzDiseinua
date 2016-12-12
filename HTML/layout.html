@@ -8,17 +8,23 @@
   </head>
   <body>
 	  <div id='page-wrap'>
-		<header class='main' id='h1'>
-			<span class="right" style="display:inline; float: right;"><a href="../HTML/signUp.html">Sign Up</a> </span><br/>
-			<span class="right" style="display:inline; float: right;"><a href="../PHP/signIn.php">Log In</a> </span>
-			<span class="right" style="display:none; float: right;"><a href="../PHP/logout.php">LogOut</a> </span>
-			<h2>Quiz: crazy questions</h2>
-		</header>
-		<nav class='main' id='n1' role='navigation'>
-			<span><a href='layout.html'>Home</a></span>
-			<span><a href='../PHP/questions.php'>Quizzes</a></span>
-			<span><a href='getUserInform.html'>Erabiltzaileak</a></span>
-			<span><a href='credits.html'>Credits</a></span>
+		<nav class="navbar navbar-inverse">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="../HTML/layout.html">MyQuizz</a>
+				</div>
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="../HTML/layout.html">Home</a></li>
+					<li><a href="../PHP/questions.php">Quizzes</a></li>
+					<li><a href="../HTML/getUserInform.html">Users</a></li>
+					<li><a href="../HTML/credits.html">Credits</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+				<li><a href="../HTML/signUp.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+				<li><a href="../PHP/signIn.php"><span class="glyphicon glyphicon-log-in"></span> Log In</a></li>
+				<li><a href="../PHP/logout.php"><span class="glyphicon glyphicon-log-out"></span> Log Out</a></li>
+				</ul>
+			</div>
 		</nav>
 		<section class="main" id="s1">
 			<div id="edukia">

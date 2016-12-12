@@ -3,7 +3,9 @@
   <head>
     <meta name="tipo_contenido" content="text/html;" http-equiv="content-type" charset="utf-8">
 	<title>Sign Up</title>
-	<link rel="stylesheet" href="../CSS/bootstrap.min.css"/>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" href="../CSS/style.css"/>
 	<script>
 		var emailOndo = false;
@@ -77,20 +79,25 @@
   </head>
   <body>
   <div id='page-wrap'>
-	<header class='main' id='h1'>
-      	<span class="right" style="display:inline; float: right;"><a href="../HTML/signUp.html">Sign Up</a> </span><br/>
-      	<span class="right" style="display:inline; float: right;"><a href="../PHP/signIn.php">Log In</a> </span>
-      	<span class='right' style='display:none; float: right;'><a href='../PHP/logout.php'>LogOut</a> </span>
-		<h2>Sign Up</h2>
-    </header>
-	<nav class='main' id='n1' role='navigation'>
-		<span><a href='../HTML/layout.html'>Home</a></span>
-		<span><a href='../PHP/questions.php'>Quizzes</a></span>
-		<span><a href='../HTML/getUserInform.html'>Erabiltzaileak</a></span>
-		<span><a href='../HTML/credits.html'>Credits</a></span>
-	</nav>
+	<nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="../HTML/layout.html">MyQuizz</a>
+			</div>
+			<ul class="nav navbar-nav">
+				<li><a href="../HTML/layout.html">Home</a></li>
+				<li><a href="../PHP/questions.php">Quizzes</a></li>
+				<li><a href="../HTML/getUserInform.html">Users</a></li>
+				<li><a href="../HTML/credits.html">Credits</a></li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+			<li class="active"><a href="../HTML/signUp.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+			<li><a href="../PHP/signIn.php"><span class="glyphicon glyphicon-log-in"></span> Log In</a></li>
+			<li><a href="../PHP/logout.php"><span class="glyphicon glyphicon-log-out"></span> Log Out</a></li>
+			</ul>
+		</div>
+	</nav>	
     <section class="main" id="s1">
-	
 	<div id="edukia">
 		<form id="erregistro" name="erregistro" method="post" onsubmit="return checkAll()" action="../PHP/enrollWithImage.php" enctype="multipart/form-data" >
 			Izena: 
