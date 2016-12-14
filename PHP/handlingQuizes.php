@@ -3,7 +3,9 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" http-equiv="content-type" charset="utf-8">
     <title>Galdera Sartu (AJAX)</title>
-	<link rel="stylesheet" href="../CSS/bootstrap.min.css"/>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" href="../CSS/style.css"/>
 	<script type="text/javascript">	
 		var timer;
@@ -126,7 +128,5 @@
 		<p><a href="https://github.com/julenferre/myquizz" target="_blank">Link GITHUB</a></p>
 	</footer>
   </div>
-  <script src="../JavaScript/jquery-3.1.1.slim.min.js"></script>
-  <script src="../JavaScript/bootstrap.min.js"></script>
   </body>
 </html>
