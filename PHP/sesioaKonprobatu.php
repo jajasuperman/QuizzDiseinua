@@ -10,7 +10,7 @@
 				echo "<li class='active'><a href='../PHP/reviewingQuizzes.php'><span class='glyphicon glyphicon-user'></span>". explode('@', $_SESSION['login_user'])[0] ."</a></li>";
 			}
 			else{
-				echo "<li class='active'><a href='../PHP/handlingQuizes.php'><span class='glyphicon glyphicon-user'></span>". explode('@', $_SESSION['login_user'])[0] ."</a></li>"
+				echo "<li class='active'><a href='../PHP/handlingQuizes.php'><span class='glyphicon glyphicon-user'></span>". explode('@', $_SESSION['login_user'])[0] ."</a></li>";
 			}
 			echo "<li><a href='../PHP/logout.php'><span class='glyphicon glyphicon-log-out'></span> Log Out</a></li>";
 		}
@@ -26,7 +26,7 @@
 				echo "<li class='active'><a href='../PHP/reviewingQuizzes.php'><span class='glyphicon glyphicon-user'></span>". explode('@', $_SESSION['login_user'])[0] ."</a></li>";
 			}
 			else{
-				echo "<li class='active'><a href='../PHP/handlingQuizes.php'><span class='glyphicon glyphicon-user'></span>". explode('@', $_SESSION['login_user'])[0] ."</a></li>"
+				echo "<li class='active'><a href='../PHP/handlingQuizes.php'><span class='glyphicon glyphicon-user'></span>". explode('@', $_SESSION['login_user'])[0] ."</a></li>";
 			}
 			echo "<li><a href='../PHP/logout.php'><span class='glyphicon glyphicon-log-out'></span> Log Out</a></li>";
 		}
