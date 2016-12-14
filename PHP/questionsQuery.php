@@ -18,9 +18,12 @@
 	$erantzuna = $conn->query($query);
 	
 	if ($erantzuna->num_rows > 0) {
+		echo "<table class='table'>";
+		echo "<tr><th>Gaia</th><th>Galdera</th><th>Maila</th></tr>";
 		while($lerroa = $erantzuna->fetch_assoc()) {
-			echo " -> <b>" .$lerroa['gaia']. ":</b> " . $lerroa['galdera'] . " (Zailtasun maila: " . $lerroa['maila'] . ")<br>";
+			echo "<tr><td>" .$lerroa['gaia']. "</td><td>" . $lerroa['galdera'] . "</td><td>" . $lerroa['maila'] . "</td></tr>";
 		}
+		echo "</table>";
 	} else {
 		echo "Ez dago galderarik";
 	}

@@ -18,7 +18,7 @@
 		
 	if ($erantzuna->num_rows > 0) {		
 		$mezua = "";
-		$mezua .= "<table>";
+		$mezua .= "<table class='table table-striped custab'>";
 		$mezua .= "<tr><th>Erabiltzailea</th><th>Galdera</th><th>Erantzuna</th><th>Gaia</th><th>Maila</th></tr>";
 		while($lerroa = $erantzuna->fetch_assoc()) {			
 			$mezua .= "<tr><form id='form".$lerroa['zenbakia']."' name='form".$lerroa['zenbakia']."' method='post' onsubmit='return eguneratuGaldera(zenbakia.value,galdera.value,erantzuna.value,gaia.value,maila.value)'>";
@@ -27,8 +27,8 @@
 			$mezua .= "<td><input type='text' id='erantzuna' value='".$lerroa['erantzuna']."' required size='30'></td>";
 			$mezua .= "<td><input type='text' id='gaia' value='".$lerroa['gaia']."'></td>";
 			$mezua .= "<td><input type='text' id='maila' value='".$lerroa['maila']."' pattern='[0-5]' size='6'></td>";
-			$mezua .= "<td><input type='submit' value='✔'></td>";
-			$mezua .= "<td><input type='button' id='ezabatu' value='✘' onclick='ezabatuGaldera(zenbakia.value)'>";
+			$mezua .= "<td><input class='btn btn-info btn-xs glyphicon glyphicon-edit' type='submit' value='✔'></td>";
+			$mezua .= "<td><input class='btn btn-danger btn-xs glyphicon glyphicon-remove' type='button' id='ezabatu' value='✘' onclick='ezabatuGaldera(zenbakia.value)'>";
 			$mezua .= "<input type='text' id='zenbakia' value='".$lerroa['zenbakia']."' style='display:none'></td>";
 			$mezua .= "</form></tr>";
 		}

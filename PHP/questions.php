@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta name="tipo_contenido" content="text/html;" http-equiv="content-type" charset="utf-8">
-	<title>Quiz</title>		
+    <meta name="viewport" content="width=device-width, initial-scale=1" http-equiv="content-type" charset="utf-8">
+    <title>Quiz</title>		
 	<link rel="stylesheet" href="../CSS/bootstrap.min.css"/>
 	<link rel="stylesheet" href="../CSS/style.css"/>
   </head>
@@ -14,7 +14,7 @@
 				<a class='navbar-brand' href='../HTML/layout.html'>MyQuizz</a>
 			</div>
 			<ul class='nav navbar-nav'>
-				<li><a href='../HTML/layout.html'>Home</a></li>
+				 
 				<li><a href='../PHP/questions.php'>Quizzes</a></li>
 				<li><a href='../HTML/getUserInform.html'>Users</a></li>
 				<li><a href='../HTML/credits.html'>Credits</a></li>
@@ -28,16 +28,12 @@
 		</div>
 	</nav>
     <section class="main" id="s1">
-	<div id="edukia" style="height: 55%; border: 1px solid black; background: white; overflow:auto;">
+	<div id="edukia" style="overflow:auto;">
 		<?php
 			include "questionsQuery.php";
 		?>
-	</div>
+	</div><br>
 	<div id="EdukiEstekak">
-		<p>XML galderak taulan ikusteko (PHP), <a href="seeXMLquestions.php">klikatu hemen</a> (Derrigorrezko zatia)</p>
-		<br>
-		<p>XML galderak taulan ikusteko (XSL), <a href="../XML/galderak.xml">klikatu hemen</a> (Hautazko zatia)</p>
-		<br>
 		<?php
 			if(isset($_SESSION['login_user'])){
 				echo "<input type='button' class='galderaGehituBotoia' onClick=\"location.href='handlingQuizes.php'\" value='Galdera gehitu'></input>";
@@ -49,6 +45,7 @@
 	</div>
     </section>
 	<footer class='main' id='f1'>
+		<hr>
 		<p><a href="http://en.wikipedia.org/wiki/Quiz" target="_blank">What is a Quiz?</a></p>
 		<p><a href='https://github.com/julenferre/myquizz' target="_blank">Link GITHUB</a></p>
 	</footer>

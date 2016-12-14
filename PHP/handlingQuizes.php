@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta name="tipo_contenido" content="text/html;" http-equiv="content-type" charset="utf-8">
-	<title>Galdera Sartu (AJAX)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" http-equiv="content-type" charset="utf-8">
+    <title>Galdera Sartu (AJAX)</title>
 	<link rel="stylesheet" href="../CSS/bootstrap.min.css"/>
 	<link rel="stylesheet" href="../CSS/style.css"/>
 	<script type="text/javascript">	
@@ -54,7 +54,7 @@
 				<a class='navbar-brand' href='../HTML/layout.html'>MyQuizz</a>
 			</div>
 			<ul class='nav navbar-nav'>
-				<li><a href='../HTML/layout.html'>Home</a></li>
+				 
 				<li><a href='../PHP/questions.php'>Quizzes</a></li>
 				<li><a href='../HTML/getUserInform.html'>Users</a></li>
 				<li><a href='../HTML/credits.html'>Credits</a></li>
@@ -69,33 +69,59 @@
 	</nav>
     <section class="main" id="s1">	
 		<div id="edukia">
-			<p id="galderaKont"><script type="text/javascript">kopuruaEguneratu()</script></p>
-			<form id="erregistro" name="erregistro" method="post" onsubmit="return galderaBidali(galdera.value,erantzuna.value,gaia.value,zailtasuna.value)">
-				Galdera (*): <br>
-				<textarea id="galdera" name="galdera" rows="6" cols="50" maxlength="300" style="resize: none"></textarea><br />
-				Erantzuna (*): <br>
-				<input type="text" id="erantzuna" name="erantzuna" size="50" maxlength="50"><br />
-				Gaia: <br />
-				<input type="text" id="gaia" name="gaia" size="50" maxlength="15"><br />
-				Zailtasun maila: 
-					<select id="zailtasuna" name="zailtasuna">
-						<option></option>
-						<option>1</option>
-						<option>2</option>
-						<option>3</option>
-						<option>4</option>
-						<option>5</option>
-					</select><br />
-				<input type="submit" value="Galdera gehitu"/>
+			<p id="galderaKont" style="text-align: center"><script type="text/javascript">kopuruaEguneratu()</script></p>
+			
+			<form id="erregistro" class="form-horizontal" name="erregistro" method="post" onsubmit="return galderaBidali(galdera.value,erantzuna.value,gaia.value,zailtasuna.value)">
+				<div class="form-group">
+					<label class="col-md-3 control-label">Galdera (*):</label>
+					<div class="col-md-8">
+						<textarea id="galdera" name="galdera" rows="6" cols="50" maxlength="300" style="resize: none"></textarea><br />
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-md-3 control-label">Erantzuna (*):</label>
+					<div class="col-md-8">
+						<input type="text" id="erantzuna" name="erantzuna" size="50" maxlength="50"><br />
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-md-3 control-label">Gaia:</label>
+					<div class="col-md-8">
+						<input type="text" id="gaia" name="gaia" size="50" maxlength="15"><br />
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-md-3 control-label">Zailtasun maila:</label>
+					<div class="col-md-8">
+						<select id="zailtasuna" name="zailtasuna">
+							<option></option>
+							<option>1</option>
+							<option>2</option>
+							<option>3</option>
+							<option>4</option>
+							<option>5</option>
+						</select><br />
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-md-3 control-label"></label>
+					<div class="col-md-4">
+						<input  type="submit" value="Galdera gehitu"/>
+					</div>
+					<div class="col-md-1"></div>
+					<div class="col-md-4">
+						<input type="button" id="galderakIkusi" name="galderakIkusi" value="Zure galderak ikusi" onClick="galderakIkusi()" />
+					</div>
+				</div>
 			</form>
 			<div id="mezuaGaldera" style="display: none;">
-			</div><br />
-			<input type="button" id="galderakIkusi" name="galderakIkusi" value="Zure galderak ikusi" onClick="galderakIkusi()" />
+			</div><br />			
 		</div><!--div edukia--><br/>
 		<div id="seeUserQuestions">
 		</div><!--div seeUserQuestions-->
     </section>
 	<footer class="main" id="f1">
+		<hr>
 		<p><a href="http://en.wikipedia.org/wiki/Quiz" target="_blank">What is a Quiz?</a></p>
 		<p><a href="https://github.com/julenferre/myquizz" target="_blank">Link GITHUB</a></p>
 	</footer>

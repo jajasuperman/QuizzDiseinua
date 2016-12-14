@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta name="tipo_contenido" content="text/html;" http-equiv="content-type" charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" http-equiv="content-type" charset="utf-8">
 	<title>Quiz</title>
 	<link rel="stylesheet" href="../CSS/bootstrap.min.css"/>
 	<link rel="stylesheet" href="../CSS/style.css"/>
-	<link rel="stylesheet" href="../CSS/taula.css"/>
 	<script>
 		function eguneratuGaldera(zbk,gal,era,gai,mai){			
 			xhttp = new XMLHttpRequest();
@@ -40,7 +39,7 @@
 				<a class='navbar-brand' href='../HTML/layout.html'>MyQuizz</a>
 			</div>
 			<ul class='nav navbar-nav'>
-				<li><a href='../HTML/layout.html'>Home</a></li>
+				 
 				<li><a href='../PHP/questions.php'>Quizzes</a></li>
 				<li><a href='../HTML/getUserInform.html'>Users</a></li>
 				<li><a href='../HTML/credits.html'>Credits</a></li>
@@ -54,13 +53,16 @@
 		</div>
 	</nav>
 		<section class="main" id="s1">
-			<div id="edukia">
+			<div class="container">
+				<div class="row col-md-10 custyle">
 				<?php
 					include "editQuestionsQuery.php";
 				?>
 			</div>
+			</div>			
 		</section>
 		<footer class='main' id='f1'>
+			<hr>
 			<p><a href="http://en.wikipedia.org/wiki/Quiz" target="_blank">What is a Quiz?</a></p>
 			<p><a href='https://github.com/julenferre/myquizz' target="_blank">Link GITHUB</a></p>
 		</footer>
