@@ -20,7 +20,7 @@
 					document.getElementById("seeUserQuestions").style.display = 'inline-block';
 				}
 			};
-			xhttp.open("GET","userQuestionsQuery.php", true);
+			xhttp.open("GET","./userQuestionsQuery.php", true);
 			xhttp.send();
 		}
 		function galderaBidali(gal,era,gai,zai){	
@@ -50,16 +50,16 @@
   </head>
   <body>
   <div id="page-wrap">
-	<nav class='navbar navbar-inverse'>
+	<nav class='navbar navbar-default'>
 	<div class='container-fluid'>
 			<div class='navbar-header'>
-				<a class='navbar-brand' href='../HTML/layout.html'>MyQuizz</a>
+				<a class='navbar-brand' href='layout.php'>MyQuizz</a>
 			</div>
 			<ul class='nav navbar-nav'>
 				 
-				<li><a href='../PHP/questions.php'>Quizzes</a></li>
-				<li><a href='../HTML/getUserInform.html'>Users</a></li>
-				<li><a href='../HTML/credits.html'>Credits</a></li>
+				<li><a href='questions.php'>Quizzes</a></li>
+				<li><a href='getUserInform.php'>Users</a></li>
+				<li><a href='credits.php'>Credits</a></li>
 			</ul>
 			<ul class='nav navbar-nav navbar-right'>
 			<?php
@@ -112,7 +112,7 @@
 					</div>
 					<div class="col-md-1"></div>
 					<div class="col-md-4">
-						<input type="button" id="galderakIkusi" name="galderakIkusi" value="Zure galderak ikusi" onClick="galderakIkusi()" />
+						<input type="button" id="galderakIkusii" name="galderakIkusii" value="Zure galderak ikusi" onClick="galderakIkusi()" />
 					</div>
 				</div>
 			</form>

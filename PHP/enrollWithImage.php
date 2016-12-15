@@ -10,16 +10,16 @@
   </head>
   <body>
   <div id='page-wrap'>
-		<nav class='navbar navbar-inverse'>
+		<nav class='navbar navbar-default'>
 		<div class='container-fluid'>
 				<div class='navbar-header'>
-					<a class='navbar-brand' href='../HTML/layout.html'>MyQuizz</a>
+					<a class='navbar-brand' href='layout.php'>MyQuizz</a>
 				</div>
 				<ul class='nav navbar-nav'>
 					 
-					<li><a href='../PHP/questions.php'>Quizzes</a></li>
-					<li><a href='../HTML/getUserInform.html'>Users</a></li>
-					<li><a href='../HTML/credits.html'>Credits</a></li>
+					<li><a href='questions.php'>Quizzes</a></li>
+					<li><a href='getUserInform.php'>Users</a></li>
+					<li><a href='credits.php'>Credits</a></li>
 				</ul>
 				<ul class='nav navbar-nav navbar-right'>
 				<?php
@@ -60,7 +60,7 @@
 					$query = "INSERT INTO erabiltzaile VALUES ('$izena', '$abizenak', '$eposta', '$encpass', '$telefonoa', '$espezialitatea', '$interesak', '$argazkia','0');";
 
 					if($conn->query($query) === TRUE) {
-						echo "<h2>Datuak ondo sartu dira</h2> <br><a href='showUsersWithImage.php'> Datuak ikusi </a><br><a href='../HTML/layout.html'> MyQuizz-era bueltatu </a>";
+						echo "<h2>Datuak ondo sartu dira</h2> <br><a href='showUsersWithImage.php'> Datuak ikusi </a><br><a href='layout.php'> MyQuizz-era bueltatu </a>";
 					}
 					else{
 						echo "<h2>Datuak ez dira sartu: " . $query . "</h2><br>" . $conn->error;

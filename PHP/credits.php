@@ -11,20 +11,21 @@
   </head>
   <body>
 	<div id='page-wrap'>
-		<nav class="navbar navbar-inverse">
+		<nav class="navbar navbar-default">
 			<div class="container-fluid">
 				<div class="navbar-header">
-					<a class="navbar-brand" href="../HTML/layout.html">MyQuizz</a>
+					<a class="navbar-brand" href="layout.php">MyQuizz</a>
 				</div>
 				<ul class="nav navbar-nav">
-					<li><a href="../PHP/questions.php">Quizzes</a></li>
-					<li><a href="../HTML/getUserInform.html">Users</a></li>
-					<li class="active"><a href="../HTML/credits.html">Credits</a></li>
+					<li><a href="questions.php">Quizzes</a></li>
+					<li><a href="getUserInform.php">Users</a></li>
+					<li class="active"><a href="credits.php">Credits</a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
-				<li><a href="../HTML/signUp.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-				<li><a href="../PHP/signIn.php"><span class="glyphicon glyphicon-log-in"></span> Log In</a></li>
-				<li><a href="../PHP/logout.php"><span class="glyphicon glyphicon-log-out"></span> Log Out</a></li>
+				<?php
+					include "sesioaKonprobatu.php";
+					eremuArrunta();
+				?>
 				</ul>
 			</div>
 		</nav>
@@ -65,7 +66,7 @@
 							zerbitz.innerHTML = "Zerbitzariaren Lokalizazioa -> " + xmlhttp.responseText;	
 						}
 					}
-					xmlhttp.open("GET", "../PHP/serverGeolocation.php", false );
+					xmlhttp.open("GET", "serverGeolocation.php", false );
 					xmlhttp.send();   
 				}
 				function showPosition(position) {
