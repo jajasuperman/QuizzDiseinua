@@ -29,7 +29,7 @@
                         }
                     }
                 };
-                xhttp.open("GET","../PHP/emailaMatrikulatuta.php?eposta=" + eposta, true);
+                xhttp.open("GET","emailaMatrikulatuta.php?eposta=" + eposta, true);
                 xhttp.send();
             }
             function checkTicketa(ticketa){
@@ -46,7 +46,7 @@
                         }
                     }
                 };
-                xhttp.open("GET","../PHP/egiaztatuTicketaBezeroa.php?ticketa=" + ticketa, true);
+                xhttp.open("GET","egiaztatuTicketaBezeroa.php?ticketa=" + ticketa, true);
                 xhttp.send();
             }
             function checkPasahitza(pasahitza){
@@ -63,7 +63,7 @@
                         }
                     }
                 };
-                xhttp.open("GET","../PHP/egiaztatuPasahitzaBezeroa.php?pasahitza=" + pasahitza, true);
+                xhttp.open("GET","egiaztatuPasahitzaBezeroa.php?pasahitza=" + pasahitza, true);
                 xhttp.send();
             }		
             function checkAll(){
@@ -76,31 +76,34 @@
             }
         </script>
         <script src="../JavaScript/signUp.js"></script> <!--<script></script> horrela jartzea beharrezkoa da-->
-    </head>
+		<?php
+			include "sesioaKonprobatu.php";
+		?>
+	</head>
     <body>
         <div id='page-wrap'>
-            <nav class="navbar navbar-inverse">
+            <nav class="navbar navbar-default">
                 <div class="container-fluid">
                     <div class="navbar-header">
-                        <a class="navbar-brand" href="../HTML/layout.html">MyQuizz</a>
+                        <a class="navbar-brand" href="layout.php">MyQuizz</a>
                     </div>
                     <ul class="nav navbar-nav">
-                        <li><a href="../PHP/questions.php">Quizzes</a></li>
-                        <li><a href="../HTML/getUserInform.html">Users</a></li>
-                        <li><a href="../HTML/credits.html">Credits</a></li>
+                        <li><a href="questions.php">Quizzes</a></li>
+                        <li><a href="getUserInform.php">Users</a></li>
+                        <li><a href="credits.php">Credits</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                        <li class="active"><a href="../HTML/signUp.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                        <li><a href="../PHP/signIn.php"><span class="glyphicon glyphicon-log-in"></span> Log In</a></li>
-                        <li><a href="../PHP/logout.php"><span class="glyphicon glyphicon-log-out"></span> Log Out</a></li>
-                    </ul>
+					<?php
+						eremuArrunta();
+					?>
+					</ul>
                 </div>
             </nav>	
             <section class="main" id="s1">
                 <div id="edukia">
                     <div class="row">
                         <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
-                            <form id="erregistro" name="erregistro" method="post" onsubmit="return checkAll()" action="../PHP/enrollWithImage.php" enctype="multipart/form-data" role="form">
+                            <form id="erregistro" name="erregistro" method="post" onsubmit="return checkAll()" action="enrollWithImage.php" enctype="multipart/form-data" role="form">
                                 <h2>Please Sign Up</h2>
                                 <hr class="colorgraph">
                                 <div class="row">

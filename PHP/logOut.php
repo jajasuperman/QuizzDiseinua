@@ -2,7 +2,7 @@
    session_start();
    
    if(session_destroy()) {
-      header("Location: ../HTML/layout.html");
+      header("Location: layout.php");
       exit();
    }
 ?>

@@ -11,16 +11,16 @@
   </head>
   <body>
   <div id='page-wrap'>
-		<nav class='navbar navbar-inverse'>
+		<nav class='navbar navbar-default'>
 		<div class='container-fluid'>
 				<div class='navbar-header'>
-					<a class='navbar-brand' href='../HTML/layout.html'>MyQuizz</a>
+					<a class='navbar-brand' href='layout.php'>MyQuizz</a>
 				</div>
 				<ul class='nav navbar-nav'>
 					 
-					<li><a href='../PHP/questions.php'>Quizzes</a></li>
-					<li><a href='../HTML/getUserInform.html'>Users</a></li>
-					<li><a href='../HTML/credits.html'>Credits</a></li>
+					<li><a href='questions.php'>Quizzes</a></li>
+					<li><a href='getUserInform.php'>Users</a></li>
+					<li><a href='credits.php'>Credits</a></li>
 				</ul>
 				<ul class='nav navbar-nav navbar-right'>
 				<?php
@@ -55,7 +55,7 @@
 						echo "<td>" . $lerroa["Izena"] . "</td><td>" . $lerroa["Abizenak"]. "</td><td>" . $lerroa["Eposta"]. "</td><td>" . $lerroa["Pasahitza"]. "</td><td>" . $lerroa["Telefonoa"]. "</td><td>" . $lerroa["Espezialitatea"]. "</td><td>" . $lerroa["Interesak"]. "</td><td><img src='data:Argazkia/jpeg;base64,".base64_encode( $lerroa['Argazkia'] )."' width='100px' /></td>";
 						echo "</tr>";
 					}
-					echo "</table><center><br><p style='text-align: center;'><a href='../HTML/layout.html'> MyQuizz-era bueltatu </a></p></body>";
+					echo "</table><center><br><p style='text-align: center;'><a href='layout.php'> MyQuizz-era bueltatu </a></p></body>";
 				} else {
 					echo "0 results";
 				}

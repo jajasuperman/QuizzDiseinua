@@ -1,7 +1,7 @@
 body {
-    background: #E0E0E0;
+    background: #b9f6ca;
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.06);
-    color: #545454;
+    color: #2e7d32;
     font-size: 16px;
     line-height: 1.5;
     margin: 0 auto;
@@ -29,8 +29,9 @@ input[type=text], input[type=password], input[type=file], input[type=email], sel
     box-sizing: border-box;
 }
 
-h1 {
-    color: #424242;
+h1, h2 {
+    color: #2e7d32;
+	text-align: center;
 }
 
 p, label, figcaption {    
@@ -57,3 +58,74 @@ input, select, h1, p, label, figcaption, table {
     box-shadow: 3px 3px 0px transparent;
     transition: 0.5s;
     }
+
+.navbar {
+	background-color: #43a047;
+}
+
+.navbar-default, input[type="text"], input[type="password"], input[type="file"], input[type="email"], select, textarea {
+	border: 1px solid #43a047;
+	color: #81c784;
+}
+
+.form-control {
+	border: 1px solid #43a047;
+	color: #81c784;
+}
+
+.navbar-default .navbar-nav > .active > a {
+	color: #a5d6a7 ;
+	background-color: #81c784;
+}
+
+.navbar-default .navbar-nav > li > a, 
+.navbar-default .navbar-brand,
+.navbar-default .navbar-nav > .active > a:hover {
+	color: #a5d6a7;
+}
+
+.navbar-default .navbar-nav > .active > a:hover{
+	background-color: #c8e6c9;
+	color: #2e7d32;
+}
+
+.navbar-default .navbar-nav > li > a:hover, 
+.navbar-default .navbar-brand:hover, 
+.navbar-default .navbar-nav > .active > a {
+	color: #e8f5e9;
+}
+
+#f1{
+	text-align:center;
+}
+
+#f1>p>a{
+	color: #43a047;
+	padding: 2px;
+	text-decoration: underline;
+}
+
+#f1>p>a:hover{
+	color: #81c784;
+}
+
+td, th, .table > tbody > tr > th {
+	border: 1px solid #b9f6ca;
+	border-top: 1px solid #b9f6ca;
+}
+
+hr {
+	border: 1px solid #43a047;
+}
+
+input[type=button], input[type=submit], button {
+	background-color: #43a047;
+}
+
+input[type=button]:hover, input[type=submit]:hover, button:hover {
+	background-color: #81c784;
+}
+
+label {
+	color: #2e7d32;
+}
